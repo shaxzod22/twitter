@@ -1,0 +1,92 @@
+@import './mixins';
+.header{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 31px;
+        padding-right: 15px;
+        padding-bottom: 48px;
+        max-width: 268px;
+        border-right: 1px solid #D8D8D8;
+    }
+    
+    &__logo{
+        width: 40px;
+        height: 33px;
+        margin-bottom: 49px;
+    }
+    &__navbar__list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+        padding-left: 15px;
+    }
+    &__navbar__item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 24px;
+        &:hover{
+            
+            .header__navbar__item__icon path{
+                fill: #1D9BF0;
+            }
+            color: #1D9BF0;
+            
+        }
+    }
+    &__navbar__item-active{
+        font-weight: bold;
+    }
+    
+    &__my__account{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__account__image{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    &__my__account__innerBox{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 16px;
+        line-height: 21px;
+        margin-right: 42px;
+    }
+
+    &__account__username{
+       opacity: 0.6;
+    }
+
+    &__account__dotes{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        cursor: pointer;
+    }
+
+    &__more__btn{
+        background-color: black;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        
+    }
+    
+    &__btn{
+        @include btn(230px,55px ,#1D9BF0 ,white ,27.5px ,18px , bold);
+        border: none;
+        cursor: pointer;
+        margin-bottom: 260px;
+    }
+    
+}

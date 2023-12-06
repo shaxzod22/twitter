@@ -1,0 +1,120 @@
+@import './mixins';
+@import './variables';
+.main{
+    width: 850px;
+    border-right: 1px solid $border-color;
+}
+
+.home{
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+    &__container{
+        @include df(row,center,space-between);
+        padding: 20px;
+    }
+    &__heading{
+        line-height: 32px;
+        font-size: 24px;
+    }
+    
+    &__star__icon{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.myPost{
+    border-bottom: 1px solid $border-color;
+    &__container{
+        @include df(column,flex-start);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__form{
+        @include df(column,flex-start);
+        width: 100%;
+    }
+    
+    &__title__box{
+        @include df(row,flex-start);
+        gap: 15px;
+        margin-bottom: 32px;
+    }
+    
+    &__title__input{
+        padding: 12px 0;
+        border: none;
+        outline: none;
+        width: 100%;
+        line-height: 25px;
+        font-size: 22px;
+        resize: none;
+        
+        &::placeholder{
+            color: $input-color;
+        }
+    }
+    
+    &__download__list{
+        @include df();
+        gap: 20px;
+        padding-left: 100px;
+    }
+    &__download__item{
+        cursor: pointer;
+    }
+    
+    &__btn{
+        @include btn(108px,50px,$button-bg,$white,120px,17px,bold);
+        border: none;
+       align-self: flex-end;
+       margin-bottom: 5px;
+    }
+}
+
+.otherPosts{
+    padding-top: 20px;
+    border-bottom: 1px solid $border-color;
+   
+
+    &__item{
+        @include df();
+        width: 100%;
+        gap: 15px;
+        padding: 10px 25px 21px;
+    }
+
+    &__inner__box{
+        width: 747px;
+        margin-right: 20px;
+    }
+
+    &__account__name{
+        font-size: 20px;
+        line-height: 26.6px;
+        font-weight: bold;
+    }
+    &__userName{
+        font-size: 18px;
+        line-height: 24px;
+        opacity: 0.6;
+        margin-bottom: 5px;
+    }
+
+    &__account__overview{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 22px;
+    }
+
+    &__emotions{
+        @include df();
+        gap: 100px;
+    }
+    &__emotion__item{
+        @include df(row,center,center);
+        gap: 10px;
+        color: $emotion-color;
+    }
+}

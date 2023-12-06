@@ -1,0 +1,58 @@
+@import './mixins';
+@import './variables';
+.login{
+    @include df(column,center);
+    min-width: 100%;
+    min-height: 100%;
+    margin-top: 60px;
+    &__container{
+        width: 450px;
+    }
+    
+    &__img__logo{
+        width: 50px;
+        height: 41px;
+        margin-bottom: 36px;
+    }
+    
+    &__heading{
+        font-size: 42px;
+        line-height: 49px;
+        margin-bottom: 36px;
+        font-size: bold;
+    }
+    
+    &__form{
+        @include df(column);
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    &__input{
+        width: 100%;
+        padding: 23px 0 23px 20px;
+        font-size: 18px;
+        line-height: 24px;
+        border-radius: 6px;
+        outline: none;
+        margin-bottom: 25px;
+        border: 1px solid #00000033;
+    }
+    
+    &__btn{
+        @include btn(100%,60px,#1DA1F2,$white,76px,18px,bolder);
+        border: none;
+        margin-top: 10px;
+    }
+    
+    &__direction__box{
+        @include df(row,center,space-between);
+    }
+    
+    &__link{
+        font-size: 18px;
+        line-height: 24px;
+        color: #1DA1F2;
+        text-decoration: none;
+    }
+}

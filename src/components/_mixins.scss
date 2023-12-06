@@ -1,0 +1,18 @@
+@mixin btn($width,$height,$bcg,$color,$brad,$fsize:16px,$fweight:normal) {
+    width: $width;
+    height: $height;
+    background-color:$bcg;
+    color: $color;
+    border-radius: $brad;
+    outline: none;
+    font-size: $fsize;
+    font-weight: $fweight;
+    cursor: pointer;
+}
+
+@mixin  df($column:row,$align:flex-start,$justify:flex-start) {
+    display: flex;
+    flex-direction: $column;
+    align-items: $align;
+    justify-content: $justify;
+}
